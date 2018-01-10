@@ -38,4 +38,4 @@ node ./src/ws/server/Server.js
 Then, you access the http://localhost:3000/public/index.html.
 
 #### demo
-[demo](./others/demo.gif)
+![demo](./others/demo.gif)
