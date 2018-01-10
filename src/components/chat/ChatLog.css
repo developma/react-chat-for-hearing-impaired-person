@@ -1,0 +1,5 @@
+.chatlog {
+  background-color: palegreen;
+  overflow-y: scroll;
+  height: 70vh;
+}

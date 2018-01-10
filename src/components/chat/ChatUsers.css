@@ -1,0 +1,14 @@
+.chatusers {
+  overflow-y: scroll;
+  height: 70vh;
+}
+
+.chatusers > ul{
+  list-style: none;
+  padding-left: 0;
+  padding-top: 0;
+}
+
+.tmpmessage {
+  background-color: lightcoral;
+}
