@@ -17,7 +17,7 @@ export default class ChatUsers extends Component {
 
   render () {
     return (
-      <div className="col-md-4">
+      <div className="col-md-3">
         <div className="panel panel-primary">
           <div className="panel-heading">
             ONLINE USERS

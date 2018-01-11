@@ -57,7 +57,7 @@ export default class ChatLog extends Component {
 
   render () {
     return (
-      <div className="col-md-8">
+      <div className="col-md-9">
         <div className="panel panel-info">
           <div className="panel-heading">
             CHAT LOG
