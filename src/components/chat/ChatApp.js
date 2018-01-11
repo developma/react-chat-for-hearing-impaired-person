@@ -17,6 +17,10 @@ export default class ChatApp extends Component {
     this.socket = null
   }
 
+  clearMessage () {
+    MessageHolder.clear()
+  }
+
   onJoin () {
     this.socket = ConnectionManager.getConnection()
     this.establishWS()
@@ -31,7 +35,7 @@ export default class ChatApp extends Component {
         if (this.state.isJoin) {
           MessageHolder.addMessage(message.name, message.colorCode, message.body)
         } else {
-          MessageHolder.clear()
+          this.clearMessage()
         }
         this.setState({
           messages: MessageHolder.getMessages()
@@ -52,9 +56,10 @@ export default class ChatApp extends Component {
 
   onLeave () {
     this.socket = null
+    this.clearMessage()
     this.setState({
       isJoin: false,
-      messages: [],
+      messages: MessageHolder.getMessages(),
       users: []
     })
   }
