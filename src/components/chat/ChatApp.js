@@ -28,8 +28,11 @@ export default class ChatApp extends Component {
   establishWS () {
     if (this.socket) {
       this.socket.on('message', (message) => {
-        console.log('debug msg ' + message.body)
-        MessageHolder.addMessage(message.name, message.colorCode, message.body)
+        if (this.state.isJoin) {
+          MessageHolder.addMessage(message.name, message.colorCode, message.body)
+        } else {
+          MessageHolder.clear()
+        }
         this.setState({
           messages: MessageHolder.getMessages()
         })

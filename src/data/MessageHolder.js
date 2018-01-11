@@ -10,6 +10,10 @@ export default class MessageHolder {
   static getMessages () {
     return MessageHolder.list
   }
+
+  static clear () {
+    MessageHolder.list.splice(0, MessageHolder.list.length)
+  }
 }
 
 MessageHolder.list = []
