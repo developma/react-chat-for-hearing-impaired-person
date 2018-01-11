@@ -16,6 +16,10 @@ However it is not enough for a hearing impaired person or deaf.
 
 ## How to XXX
 
+### Environment
+- node.js v7.10.0
+- webpack 3.8.1
+
 ### How to install
 
 ```
