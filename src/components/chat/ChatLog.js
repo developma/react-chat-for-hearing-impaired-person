@@ -65,7 +65,7 @@ export default class ChatLog extends Component {
           <div className="panel-body">
             <div className="chatlog" ref="log">
               {(() => {
-                return this.props.isJoin && this.state.messages.map(e => (
+                return this.props.messages.map(e => (
                   <div>
                     <font color={e.colorCode}>{e.name}</font>:{e.body}
                   </div>
@@ -79,7 +79,7 @@ export default class ChatLog extends Component {
               className="form-control"
               placeholder="your message"
               value={this.state.tmpmessage}
-              disabled={this.state.disabled}
+              disabled={!this.props.isJoin}
               onInput={e => this.onInput(e)}
               onKeyPress={e => this.onKeyPress(e)}
             />
