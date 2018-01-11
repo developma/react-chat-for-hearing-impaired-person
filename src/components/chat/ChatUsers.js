@@ -2,19 +2,6 @@ import React, {Component} from 'react'
 import './ChatUsers.css'
 
 export default class ChatUsers extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      users: this.props.users
-    }
-  }
-
-  componentWillReceiveProps (nextProps) {
-    this.setState({
-      users: nextProps.users
-    })
-  }
-
   render () {
     return (
       <div className="col-md-3">
@@ -26,7 +13,7 @@ export default class ChatUsers extends Component {
             <div className="chatusers">
               <ul>
                 {(() => {
-                  return this.props.isJoin && this.state.users.map(e => (
+                  return this.props.users.map(e => (
                     <li key={e.id}>
                       <div className="user">
                         <font color={e.colorCode}>

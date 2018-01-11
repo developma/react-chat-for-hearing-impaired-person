@@ -39,8 +39,12 @@ export default class ChatApp extends Component {
       })
 
       this.socket.on('users', (data) => {
+        let users = []
+        if (this.state.isJoin) {
+          users = data.users
+        }
         this.setState({
-          users: data.users
+          users: users
         })
       })
     }
